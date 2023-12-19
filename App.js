@@ -1,10 +1,18 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import TestComponent from './pages/test';
+import { TextSm } from './core/text/textSmall';
+import { globalTextStyles } from './globalStyles/text';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app! Test</Text>
+      <TextSm>Open up App.js to start working on your app! Test</TextSm>
+      <Text style={globalTextStyles.textStylesSmall}>Test styles</Text>
+      <Text style={globalTextStyles.textStylesRegular}>Test styles</Text>
+      <Text style={globalTextStyles.textStylesMedium}>Test styles</Text>
+      <Text style={globalTextStyles.textStylesLarge}>Test styles</Text>
+      <TestComponent />
       <StatusBar style="auto" />
     </View>
   );
